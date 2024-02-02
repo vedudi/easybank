@@ -1,0 +1,51 @@
+.article{
+    background-color: $veryLightGray;
+    h2{
+        margin-bottom: 40px;
+    }
+    &__grid{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 28px;
+        @include breakpoints-up(medium){
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include breakpoints-up(large){
+            grid-template-columns: repeat(4, 1fr);
+        }
+    }
+    &__item{
+        text-decoration: none;
+        overflow: hidden;
+        border-radius: 10px;
+        background-color: $white;
+        box-shadow: 0px 3px 12px rgba(0, 0, 0, 0.15);
+        &:hover{
+            scale: 1.03 ;
+        }
+    }
+    &__img{
+       
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+    }
+    &__text{
+        padding: 30px;
+        color: $grayishBlue;
+    }
+    &__author{
+        font-size: 10px ;
+        margin-bottom: 13px;
+    }
+    &__title{
+        color: $darkBlue;
+        font-size: 18px;
+        line-height: 1.25;
+        margin-bottom: 10px;
+    }
+    &__description{
+        font-size: 14px;
+    }
+}
